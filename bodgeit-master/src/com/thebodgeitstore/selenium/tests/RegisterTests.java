@@ -11,10 +11,12 @@ import static org.mockito.Mockito.*;
 
 import com.thebodgeitstore.pageObjects.RegisterPage;
 
+import junit.framework.TestCase;
+
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 
-public class RegisterTests {
+public class RegisterTests extends TestCase {
 	private WebDriver driver;
 	private String site = "https://bodgeit.herokuapp.com/";
 	private MockitoTest test = mock(MockitoTest.class);
@@ -110,6 +112,14 @@ public class RegisterTests {
 		String randomUser = test.getValidUser();
 		this.registerUser(randomUser, test.getValidPassword1(), test.getInvalidPassword2());
 		assertTrue(driver.getPageSource().indexOf("The passwords you have supplied are different.") > 0);
+	}
+	
+	public void testAll() {
+		tstRegisterUser();
+		tstRegisterUserWithInvalidUsername();
+		tstRegisterUserWithInvalidPassword();
+		tstRegisterUserWithInvalidUsernameAndPassword();
+		tstRegisterUserWithDifferentPasswords();
 	}
 	
 	public void tearDown() throws Exception {
