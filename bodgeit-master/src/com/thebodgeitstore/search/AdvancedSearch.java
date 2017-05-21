@@ -33,6 +33,7 @@ public class AdvancedSearch {
     private static String jsonEmpty = "[]";
     private static String htmlEmpty = "<div><b>No Results Found</b></div>";
 
+    
     //Constructor
     public AdvancedSearch(HttpServletRequest req, HttpSession sess, Connection conn){
         this.request = req;
