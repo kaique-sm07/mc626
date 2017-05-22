@@ -92,6 +92,7 @@ public class LoginTests {
     sleep();
   }
 
+  
   public void tstLogin_Fail_NaoCadastrado() {
     // Cria usuario mas não cadastra
     String randomUser = RandomStringUtils.randomAlphabetic(10) + "@test.com";
