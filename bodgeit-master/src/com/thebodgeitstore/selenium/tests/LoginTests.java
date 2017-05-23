@@ -15,7 +15,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import com.thebodgeitstore.pageObjects.LoginPage;
 import com.thebodgeitstore.pageObjects.RegisterPage;
 
-public class LoginTests {
+import junit.framework.TestCase;
+
+public class LoginTests extends TestCase {
   private WebDriver driver;
   private String site = "https://bodgeit.herokuapp.com/";
   private MockitoTest test = mock(MockitoTest.class);

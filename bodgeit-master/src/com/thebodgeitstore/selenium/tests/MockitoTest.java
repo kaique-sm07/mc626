@@ -24,4 +24,16 @@ public class MockitoTest {
 	public String getInvalidPassword2() {
 		return "";
 	}
+	
+	public String getValidItem() {
+		return "";
+	}
+	
+	public String getInvalidItem() {
+		return "";
+	}
+	
+	public String getXSSCode() {
+		return "";
+	}
 }
